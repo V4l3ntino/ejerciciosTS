@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contar Palabras y Letras</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="container">
+    <form>
+      <label for="textarea">Escribe tu texto:</label>
+      <textarea id="textarea" rows="10" maxlength="200"></textarea>
+    </form>
+    <div class="counters">
+      <blockquote>
+        Número de letras: <span id="numLetras">0</span><br>
+        Número de palabras: <span id="numPalabras">0</span>
+      </blockquote>
+    </div>
+  </div>
+  
+  <script src="./dist/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventana Modal</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <button id="openModal">Abrir Modal</button>
+
+  <!-- Ventana Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-header">
+        <span id="modalTitle">Título del Modal</span>
+        <span class="close" id="closeModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p id="modalMessage">Mensaje del Modal</p>
+      </div>
+      <div class="modal-footer">
+        <button id="acceptButton">Aceptar</button>
+        <button id="cancelButton">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./dist/index.js"></script>
+</body>
+</html>

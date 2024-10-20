@@ -1,0 +1,65 @@
+/* styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: #c0c0c0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat.available:hover {
+  background-color: #90ee90; /* Verde claro para butacas disponibles */
+}
+
+.seat.selected {
+  background-color: #ffcc00; /* Amarillo para butacas seleccionadas */
+}
+
+.seat.occupied {
+  background-color: #ff4d4d; /* Rojo para butacas ocupadas */
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,21 @@
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: #e7a61a;
+  border: 13px solid #000;
+  border-radius: 51px 10px 10px 44px;
+}
+
+.controls{
+  background: orange;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding:50px
+}
+
+label{
+  padding: 10px;
+  border: 2px black solid;
+  background-color: azure;
+}

@@ -1,0 +1,49 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  padding: 20px;
+  height: 150vh; /* Hacemos la página más larga para demostrar el botón */
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; 
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.scroll-to-top.visible {
+  display: block; 
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-to-top.hidden {
+  opacity: 0; 
+  transform: translateY(10px); 
+}

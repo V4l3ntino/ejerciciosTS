@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript Form</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <form id="exampleForm">
+    <fieldset>
+      <legend>Formulario de Ejemplo</legend>
+
+      <!-- Campo de texto -->
+      <label for="text">Nombre:</label>
+      <input type="text" id="text" name="text" required minlength="2" maxlength="30" placeholder="Tu nombre"><br>
+
+      <!-- Campo de número -->
+      <label for="age">Edad:</label>
+      <input type="number" id="age" name="age" min="18" max="99" required placeholder="Edad"><br>
+
+      <!-- Campo de contraseña -->
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required minlength="6"><br>
+
+      <!-- Teléfono -->
+      <label for="tel">Teléfono:</label>
+      <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="123-456-7890"><br>
+
+      <!-- URL -->
+      <label for="url">Página Web:</label>
+      <input type="url" id="url" name="url" placeholder="https://tupagina.com"><br>
+
+      <!-- Color -->
+      <label for="color">Color Favorito:</label>
+      <input type="color" id="color" name="color" value="#ff0000"><br>
+
+      <!-- Checkbox -->
+      <label for="subscribe">Suscribirme al boletín:</label>
+      <input type="checkbox" id="subscribe" name="subscribe" checked><br>
+
+      <!-- Radio -->
+      <label>Género:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Hombre</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Mujer</label><br>
+
+      <!-- Fecha -->
+      <label for="birthday">Cumpleaños:</label>
+      <input type="date" id="birthday" name="birthday" required><br>
+
+      <!-- Rango -->
+      <label for="experience">Años de experiencia:</label>
+      <input type="range" id="experience" name="experience" min="0" max="40" step="1" value="5" oninput="updateRangeValue(this.value)">
+      <span id="rangeValue">5</span> años<br>
+
+      <!-- Select simple -->
+      <label for="country">País:</label>
+      <select id="country" name="country" size="1" required>
+        <option value="">Selecciona tu país</option>
+        <option value="ES">España</option>
+        <option value="FR">Francia</option>
+        <option value="US">Estados Unidos</option>
+      </select><br>
+
+      <!-- Select múltiple -->
+      <label for="languages">Idiomas:</label>
+      <select id="languages" name="languages" multiple size="3" required>
+        <option value="en">Inglés</option>
+        <option value="es">Español</option>
+        <option value="fr">Francés</option>
+      </select><br>
+
+      <!-- Textarea -->
+      <label for="bio">Biografía:</label>
+      <textarea id="bio" name="bio" rows="4" cols="50" maxlength="200" placeholder="Escribe sobre ti"></textarea><br>
+
+      <!-- Archivo -->
+      <label for="file">Sube tu CV:</label>
+      <input type="file" id="file" name="file" accept=".pdf" required><br>
+
+      <!-- Botones -->
+      <button type="submit">Enviar</button>
+      <button type="reset">Reiniciar</button>
+    </fieldset>
+  </form>
+
+  <script src="./dist/index.js"></script>
+</body>
+</html>

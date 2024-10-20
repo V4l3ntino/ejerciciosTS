@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Dinámico</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Control de Color de Fondo y Texto</h1>
+    <p id="colorInfo">Color de fondo: #000000 (RGB: 0, 0, 0)</p>
+    <p id="textColorInfo">Color del texto: #FFFFFF (RGB: 255, 255, 255)</p>
+
+    <div id="sliders">
+      <h2>Color de Fondo (RGB)</h2>
+      <label for="redSlider">Rojo</label>
+      <input type="range" id="redSlider" min="0" max="255" value="0">
+      
+      <label for="greenSlider">Verde</label>
+      <input type="range" id="greenSlider" min="0" max="255" value="0">
+      
+      <label for="blueSlider">Azul</label>
+      <input type="range" id="blueSlider" min="0" max="255" value="0">
+
+      <h2>Color del Texto (RGB)</h2>
+      <label for="textRedSlider">Rojo</label>
+      <input type="range" id="textRedSlider" min="0" max="255" value="255">
+      
+      <label for="textGreenSlider">Verde</label>
+      <input type="range" id="textGreenSlider" min="0" max="255" value="255">
+      
+      <label for="textBlueSlider">Azul</label>
+      <input type="range" id="textBlueSlider" min="0" max="255" value="255">
+    </div>
+  </div>
+
+  <script src="./dist/index.js"></script>
+</body>
+</html>

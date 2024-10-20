@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Border-Radius</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div style="display: flex; gap: 10px;">
+        <div class="controls">
+            <label>Grosor del borde: <input id="grosor" type="range" value="13" min="0" max="200"><input type="number" value="13" name="valor" id="grosorv" readonly></label>
+            <label>Radio superior izquierdo: <input id="tl" type="range" value="51" min="0" max="200"><input type="number" value="52" name="valor" id="tlv" readonly></label>
+            <label>Radio superior derecho: <input id="tr" type="range" value="10" min="0" max="200"><input type="number" value="10" name="valor" id="trv" readonly></label>
+            <label>Radio inferior derecho: <input id="br" type="range" value="10" min="0" max="200"><input type="number" value="10" name="valor" id="brv" readonly></label>
+            <label>Radio inferior izquierdo: <input id="bl" type="range" value="44" min="0" max="200"><input type="number" value="44" name="valor" id="blv" readonly></label>
+        </div>
+        <div class="box" id="box"></div>
+    </div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>
