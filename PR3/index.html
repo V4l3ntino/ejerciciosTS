@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factura Dinámica</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    .total-row {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Factura</h2>
+  <table id="facturaTable">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio (€)</th>
+        <th>Total (€)</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="productosBody">
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" class="total-row">Subtotal</td>
+        <td id="subtotal">0.00 €</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="3" class="total-row">Impuestos (21%)</td>
+        <td id="impuestos">0.00 €</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="3" class="total-row">Total</td>
+        <td id="total">0.00 €</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+  <button onclick="addRow()">Añadir Producto</button>
+
+  <script src="./dist/index.js"></script>
+</body>
+</html>
