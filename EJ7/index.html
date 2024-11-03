@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas</title>
+</head>
+<body>
+  <div style="max-width: 400px; margin: 0 auto; padding: 20px; border: 1px solid #ccc;">
+    <h2>Generador de Contraseñas</h2>
+    <form id="passwordForm">
+      <label>
+        Longitud:
+        <input type="number" id="length" name="length" min="4" max="20" value="8" required>
+      </label>
+      <br>
+
+      <label>
+        Incluir Mayúsculas
+        <input type="checkbox" id="useUppercase" name="useUppercase" checked>
+      </label>
+      <br>
+
+      <label>
+        Incluir Minúsculas
+        <input type="checkbox" id="useLowercase" name="useLowercase" checked>
+      </label>
+      <br>
+
+      <label>
+        Incluir Números
+        <input type="checkbox" id="useNumbers" name="useNumbers" checked>
+      </label>
+      <br>
+
+      <label>
+        Incluir Símbolos
+        <input type="checkbox" id="useSymbols" name="useSymbols">
+      </label>
+      <br>
+
+      <label>
+        Símbolos Personalizados:
+        <input type="text" id="customSymbols" name="customSymbols" placeholder="Ejemplo: @#$%^">
+      </label>
+      <br><br>
+
+      <button type="button" onclick="generateAndDisplayPassword()">Generar Contraseña</button>
+    </form>
+    <div id="resultado">
+      <h3>Contraseña Generada:</h3>
+      <p id="generatedPassword"></p>
+    </div>
+  </div>
+
+  <script src="./dist/index.js"></script>
+  <script>
+    function generateAndDisplayPassword() {
+      const length = parseInt(document.getElementById('length').value);
+      const useUppercase = document.getElementById('useUppercase').checked;
+      const useLowercase = document.getElementById('useLowercase').checked;
+      const useNumbers = document.getElementById('useNumbers').checked;
+      const useSymbols = document.getElementById('useSymbols').checked;
+      const customSymbols = document.getElementById('customSymbols').value;
+
+      const options = { length, useUppercase, useLowercase, useNumbers, useSymbols, customSymbols };
+
+      const generatedPassword = generatePassword(options);
+      document.getElementById('generatedPassword').innerText = generatedPassword;
+    }
+  </script>
+</body>
+</html>
